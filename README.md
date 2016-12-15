@@ -2,7 +2,7 @@ Hopscotch concurrent hash table [1] implementation with a few minor bug fixes
 from the implementation from
 https://sites.google.com/site/cconcurrencypackage/hopscotch-hashing
 
-This implementation has been used in HYPRE sparse linear solver library [2] (http://computation.llnl.gov/projects/hypre-scalable-linear-solvers-multigrid-methods/software) and Intel optimized high performance conjugate gradient (HPCG) benchmark [3] (https://software.intel.com/en-us/articles/intel-mkl-benchmarks-suite).
+This implementation has been used in HYPRE sparse linear solver library (http://computation.llnl.gov/projects/hypre-scalable-linear-solvers-multigrid-methods/software) [2] and Intel optimized high performance conjugate gradient (HPCG) benchmark (https://software.intel.com/en-us/articles/intel-mkl-benchmarks-suite) [3].
 
 The code is very simple with 1 header file and 1 source file.
 It has been only tested with x86 processors and Intel compiler.
