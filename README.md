@@ -23,6 +23,17 @@ advantage of multiple cores available to accelerate this pre-processing step.
 The test input file provided captures the case of 96^3 27-pt 3D Laplacian
 parallelized with 16 MPI ranks.
 
+Example test command
+```
+cd test
+bzip2 -d --keep new_offd_nodes_lap3d_96_16ranks.dump.bz2
+env OMP_NUM_THREADS=11 KMP_AFFINITY=granularity=fine,compact,1 ./hash_bench new_offd_nodes_lap3d_96_16ranks.dump # this test run was on Xeon E5-2699 v4 @ 2.2 GHz
+...
+c++ std:   avg 24.019179 max 24.593894 mop/s
+TBB: avg 24.962183 max 25.379963 mop/s
+Hopscotch: avg 106.182849 max 114.622221 mop/s
+```
+
 [1] Maurice Herlihy, Nir Shavit, and Moran Tzafrir, Hopscotch Hashing, International Symposium on Distributed Computing (DISC), 2008
 
 [2] Jongsoo Park, Mikhail Smelyanskiy, Ulrike Meier Yang, Dheevatsa Mudigere, and Pradeep Dubey, High-Performance Algebraic Multigrid Solver Optimized for Multi-Core Based Distributed Parallel Systems, The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC), 2015
