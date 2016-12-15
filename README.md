@@ -24,5 +24,7 @@ The test input file provided captures the case of 96^3 27-pt 3D Laplacian
 parallelized with 16 MPI ranks.
 
 [1] Maurice Herlihy, Nir Shavit, and Moran Tzafrir, Hopscotch Hashing, International Symposium on Distributed Computing (DISC), 2008
+
 [2] Jongsoo Park, Mikhail Smelyanskiy, Ulrike Meier Yang, Dheevatsa Mudigere, and Pradeep Dubey, High-Performance Algebraic Multigrid Solver Optimized for Multi-Core Based Distributed Parallel Systems, The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC), 2015
+
 [3] Jongsoo Park, Mikhail Smelyanskiy, Karthikeyan Vaidyanathan, Alexander Heinecke, Dhiraj D. Kalamkar, Xing Liu, Md. Mostofa Ali Patwary, Yutong Lu, and Pradeep Dubey, Efficient Shared-Memory Implementation of High-Performance Conjugate Gradient Benchmark and Its Application to Unstructured Matrices, The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC), 2014
