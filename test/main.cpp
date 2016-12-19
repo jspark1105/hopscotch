@@ -336,7 +336,7 @@ int parallel_merge_unique(
 
    prefix_sum_workspace[my_thread_num] = out_len;
 
-#ifdef HYPRE_USING_OPENMP
+#ifdef _OPENMP
 #pragma omp barrier
 #endif
 
@@ -361,7 +361,7 @@ int parallel_merge_unique(
       }
    }
 
-#ifdef HYPRE_USING_OPENMP
+#ifdef _OPENMP
 #pragma omp barrier
 #endif
 
@@ -380,7 +380,7 @@ int parallel_merge_unique(
    assert(std::is_sorted(out + out_begin, out + out_end));
    assert(std::adjacent_find(out + out_begin, out + out_end) == out + out_end);
 
-#ifdef HYPRE_USING_OPENMP
+#ifdef _OPENMP
 #pragma omp barrier
 #endif
 
@@ -395,7 +395,7 @@ int parallel_merge_unique(
       delete[] dbg_buf;
    }
 
-#ifdef HYPRE_USING_OPENMP
+#ifdef _OPENMP
 #pragma omp barrier
 #endif
 #endif
@@ -493,7 +493,7 @@ int merge_sort_unique2(int *in, int *temp, int len, int **out)
    int thread_private_len[omp_get_max_threads()];
    int out_len = 0;
 
-#ifdef HYPRE_USING_OPENMP
+#ifdef _OPENMP
 #pragma omp parallel
 #endif
    {
@@ -531,7 +531,7 @@ int merge_sort_unique2(int *in, int *temp, int len, int **out)
          int *out_buf = temp;
          for (in_group_size = 1; in_group_size < num_threads; in_group_size *= 2)
          {
-#ifdef HYPRE_USING_OPENMP
+#ifdef _OPENMP
 #pragma omp barrier
 #endif
 
